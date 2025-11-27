@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Underpaid No More - Educational Blog</title>
+    <style>
+        :root {
+            --teal-primary: #3D8B7B;
+            --teal-dark: #2C6D5F;
+            --teal-light: #E8F4F1;
+            --plum-accent: #8B2847;
+            --plum-medium: #A94665;
+            --plum-light: #F4E4EC;
+            --text-dark: #2c2c2c;
+            --shell-white: #FEFAFC;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--shell-white);
+        }
+
+        /* Logo Section */
+        .logo-section {
+            background: white;
+            padding: 20px 20px 0 20px;
+            text-align: center;
+        }
+
+        .logo {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--teal-primary) 0%, var(--teal-dark) 100%);
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-family: 'Arial', sans-serif;
+            font-size: 2.8em;
+            color: white;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+
+        .header p {
+            font-size: 1.3em;
+            color: white;
+            opacity: 0.95;
+            font-style: italic;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 60px 30px;
+        }
+
+        .intro-text {
+            text-align: center;
+            font-size: 1.25em;
+            color: var(--text-dark);
+            margin-bottom: 60px;
+            line-height: 1.8;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Blog Grid */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        /* Blog Card */
+        .blog-card {
+            background: white;
+            border: 3px solid var(--teal-primary);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(61, 139, 123, 0.15);
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(61, 139, 123, 0.3);
+        }
+
+        .blog-card-header {
+            background: linear-gradient(135deg, var(--teal-light) 0%, white 100%);
+            padding: 30px;
+            border-bottom: 2px solid var(--teal-primary);
+        }
+
+        .blog-number {
+            font-family: 'Arial', sans-serif;
+            font-size: 0.9em;
+            color: var(--plum-accent);
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .blog-card h2 {
+            font-family: 'Arial', sans-serif;
+            font-size: 1.8em;
+            color: var(--teal-primary);
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .blog-excerpt {
+            font-size: 1.1em;
+            color: var(--text-dark);
+            line-height: 1.7;
+        }
+
+        .blog-card-body {
+            padding: 30px;
+        }
+
+        .blog-meta {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+            font-size: 0.95em;
+            color: #666;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .blog-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+
+        .tag {
+            background: var(--plum-light);
+            color: var(--plum-accent);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+
+        .read-more-btn {
+            display: inline-block;
+            background: var(--plum-accent);
+            color: white;
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        .read-more-btn:hover {
+            background: var(--plum-medium);
+            transform: translateX(5px);
+        }
+
+        /* Coming Soon Section */
+        .coming-soon {
+            background: var(--teal-light);
+            border: 2px solid var(--teal-primary);
+            border-radius: 15px;
+            padding: 40px;
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        .coming-soon h2 {
+            font-family: 'Arial', sans-serif;
+            color: var(--teal-primary);
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .coming-soon p {
+            font-size: 1.15em;
+            color: var(--text-dark);
+            margin-bottom: 25px;
+            line-height: 1.7;
+        }
+
+        .upcoming-topics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .upcoming-topic {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--plum-accent);
+            text-align: left;
+            font-size: 1em;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        /* Back to Hub */
+        .back-to-hub {
+            text-align: center;
+            margin: 60px 0;
+        }
+
+        .back-to-hub a {
+            display: inline-block;
+            color: var(--teal-primary);
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: 600;
+            padding: 15px 30px;
+            border: 2px solid var(--teal-primary);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .back-to-hub a:hover {
+            background: var(--teal-primary);
+            color: white;
+        }
+
+        /* Footer */
+        .footer {
+            background: linear-gradient(135deg, var(--plum-accent) 0%, #6B1F3A 100%);
+            color: white;
+            padding: 50px 30px;
+            text-align: center;
+        }
+
+        .footer h3 {
+            color: white;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        .footer p {
+            margin-bottom: 15px;
+            font-size: 1.1em;
+            color: white;
+        }
+
+        .footer-links {
+            margin-top: 30px;
+            font-size: 1.1em;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--teal-primary);
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .upcoming-topics {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Logo Section -->
+    <div class="logo-section">
+        <div class="logo">
+            <img src="Underpaid_No_More_Logo.png" alt="Underpaid No More Logo">
+        </div>
+    </div>
+
+    <!-- Header -->
+    <div class="header">
+        <h1>RECLAIMING $52 BILLION IN STOLEN WEALTH</h1>
+        <p>Educational resources to understand, confront, and overcome systemic underpayment</p>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <p class="intro-text">
+            Welcome to the Underpaid No More educational blog. Here, we explore the structural, historical, and systemic forces that keep women underpaid — and the strategic pathways to reclaim what you're owed.
+        </p>
+
+        <!-- Blog Grid -->
+        <div class="blog-grid">
+            
+            <!-- Blog 1: $52 Billion in Stolen Wealth -->
+            <div class="blog-card">
+                <div class="blog-card-header">
+                    <div class="blog-number">Blog #1 ⭐ START HERE</div>
+                    <h2>$52 Billion in Stolen Wealth</h2>
+                    <p class="blog-excerpt">The true cost of Australia's gender pay gap—and how to reclaim your share</p>
+                </div>
+                <div class="blog-card-body">
+                    <div class="blog-meta">
+                        <div class="meta-item">📖 10 min read</div>
+                        <div class="meta-item">💰 Foundation piece</div>
+                    </div>
+                    <div class="blog-tags">
+                        <span class="tag">$52 Billion Theft</span>
+                        <span class="tag">Lifetime Impact</span>
+                        <span class="tag">Reclaim Pathways</span>
+                    </div>
+                    <p style="margin-bottom: 25px; line-height: 1.7;">
+                        Every year, Australian women lose $52 billion to the gender pay gap. But this isn't theft through explicit discrimination—it's theft through language. When your work is described as "supportive" instead of "strategic," when your title says "Coordinator" instead of "Manager," when your reviews praise you for being "helpful" instead of "driving results"—you're being linguistically devalued. And linguistic devaluation = lower pay. Discover how the $52 billion is stolen through minimizing language, how it compounds into $1.6 million in lifetime losses, and the three pathways to reclaim your share.
+                    </p>
+                    <a href="https://darlene-conscious.github.io/UNM-Blogs/52-Billion-Dollar-Blog.html" class="read-more-btn">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Blog 2: The 50-Year Consequence -->
+            <div class="blog-card">
+                <div class="blog-card-header">
+                    <div class="blog-number">Blog #2</div>
+                    <h2>The 50-Year Consequence</h2>
+                    <p class="blog-excerpt">Why women over 50 are Australia's fastest-growing homeless demographic</p>
+                </div>
+                <div class="blog-card-body">
+                    <div class="blog-meta">
+                        <div class="meta-item">📖 5 min read</div>
+                        <div class="meta-item">📊 Data-driven</div>
+                    </div>
+                    <div class="blog-tags">
+                        <span class="tag">Homelessness</span>
+                        <span class="tag">Superannuation Gap</span>
+                        <span class="tag">Older Women</span>
+                    </div>
+                    <p style="margin-bottom: 25px; line-height: 1.7;">
+                        Every night in Australia, more than 7,300 women aged 55+ are homeless — the fastest-growing demographic. This isn't about personal failure. It's the predictable outcome of a lifetime of systematic economic disadvantage. Discover how wage inequality compounds into housing insecurity decades later.
+                    </p>
+                    <a href="The-50-Year-Consequence-Blog.html" class="read-more-btn">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Blog 3: What the Gender Pay Gap Actually Measures -->
+            <div class="blog-card">
+                <div class="blog-card-header">
+                    <div class="blog-number">Blog #3</div>
+                    <h2>What the Gender Pay Gap Actually Measures</h2>
+                    <p class="blog-excerpt">(And why everyone gets it wrong)</p>
+                </div>
+                <div class="blog-card-body">
+                    <div class="blog-meta">
+                        <div class="meta-item">📖 8 min read</div>
+                        <div class="meta-item">💡 Myth-busting</div>
+                    </div>
+                    <div class="blog-tags">
+                        <span class="tag">Pay Gap Explained</span>
+                        <span class="tag">Job Devaluation</span>
+                        <span class="tag">Gendered Language</span>
+                    </div>
+                    <p style="margin-bottom: 25px; line-height: 1.7;">
+                        "But it's illegal to pay women less!" The #1 objection — and why it misses the entire point. The gender pay gap isn't about identical roles getting different pay. It's about how entire industries become devalued when women enter them, how job titles use coded language to justify lower wages, and how structural barriers prevent women from reaching high-paying positions.
+                    </p>
+                    <a href="What-The-Gender-Pay-Gap-Actually-Measures-Blog.html" class="read-more-btn">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Blog 4: The Language Trap -->
+            <div class="blog-card">
+                <div class="blog-card-header">
+                    <div class="blog-number">Blog #4</div>
+                    <h2>The Language Trap</h2>
+                    <p class="blog-excerpt">How feminine-coded words suppress your salary</p>
+                </div>
+                <div class="blog-card-body">
+                    <div class="blog-meta">
+                        <div class="meta-item">📖 7 min read</div>
+                        <div class="meta-item">🔬 Research-based</div>
+                    </div>
+                    <div class="blog-tags">
+                        <span class="tag">Gendered Language</span>
+                        <span class="tag">Job Descriptions</span>
+                        <span class="tag">Negotiation</span>
+                    </div>
+                    <p style="margin-bottom: 25px; line-height: 1.7;">
+                        "Supportive." "Collaborative." "Nurturing." These words aren't neutral—they're suppressing your salary. Discover how masculine and feminine-coded language in job descriptions determines who applies, who gets hired, and how much roles pay. Learn to spot the pattern and rewrite your own narrative using language that gets rewarded.
+                    </p>
+                    <a href="The-Language-Trap-Blog.html" class="read-more-btn">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Blog 5: The Pink Collar Ghetto -->
+            <div class="blog-card">
+                <div class="blog-card-header">
+                    <div class="blog-number">Blog #5</div>
+                    <h2>The Pink Collar Ghetto</h2>
+                    <p class="blog-excerpt">How care work became women's work—and why it pays less</p>
+                </div>
+                <div class="blog-card-body">
+                    <div class="blog-meta">
+                        <div class="meta-item">📖 8 min read</div>
+                        <div class="meta-item">📚 Historical deep-dive</div>
+                    </div>
+                    <div class="blog-tags">
+                        <span class="tag">Care Work</span>
+                        <span class="tag">Pink Collar Jobs</span>
+                        <span class="tag">Wage Devaluation</span>
+                    </div>
+                    <p style="margin-bottom: 25px; line-height: 1.7;">
+                        Nursing. Teaching. Childcare. Social work. These professions require degrees, certifications, and specialized skills—yet they pay significantly less than trades requiring similar training. Why? Because they're done by women. Explore the history of how entire industries were feminized to justify lower pay, and why care work remains systematically undervalued.
+                    </p>
+                    <a href="The-Pink-Collar-Ghetto-Blog.html" class="read-more-btn">Read Article →</a>
+                </div>
+            </div>
+
+            <!-- Blog 6: The Language Trap Part 2 -->
+            <div class="blog-card">
+                <div class="blog-card-header">
+                    <div class="blog-number">Blog #6</div>
+                    <h2>The Language Trap Part 2</h2>
+                    <p class="blog-excerpt">Your job description is keeping you underpaid</p>
+                </div>
+                <div class="blog-card-body">
+                    <div class="blog-meta">
+                        <div class="meta-item">📖 9 min read</div>
+                        <div class="meta-item">🔧 Actionable audit</div>
+                    </div>
+                    <div class="blog-tags">
+                        <span class="tag">Job Descriptions</span>
+                        <span class="tag">Performance Reviews</span>
+                        <span class="tag">Strategic Exit</span>
+                    </div>
+                    <p style="margin-bottom: 25px; line-height: 1.7;">
+                        Your current job description is filled with feminine-coded language that minimizes your contributions and justifies your lower salary. Learn how to audit your JD and performance reviews for warning signs, reframe your achievements using valued language, and know when it's time to strategically exit a system designed to keep you underpaid.
+                    </p>
+                    <a href="The-Language-Trap-Part-2-Blog.html" class="read-more-btn">Read Article →</a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Coming Soon Section -->
+        <div class="coming-soon">
+            <h2>📚 Coming Soon</h2>
+            <p>We're building a comprehensive library of educational content to help you understand and fight systemic underpayment. Here's what's next:</p>
+            
+            <div class="upcoming-topics">
+                <div class="upcoming-topic">🏛️ The Ancient Roots: How Greece's Misogyny Shaped Modern Work</div>
+                <div class="upcoming-topic">💰 From "Pin Money" to Pay Equity: The Secondary Earner Myth</div>
+                <div class="upcoming-topic">👶 The Motherhood Penalty vs. The Fatherhood Bonus</div>
+                <div class="upcoming-topic">🎯 Confidence Isn't the Problem: Debunking "Women Don't Ask"</div>
+                <div class="upcoming-topic">📊 Your Worth in Numbers: Researching Your Market Value</div>
+                <div class="upcoming-topic">⏰ The Second Shift: How "Flexible Work" Burdens Women</div>
+            </div>
+        </div>
+
+        <!-- Back to Hub -->
+        <div class="back-to-hub">
+            <a href="https://darlene-conscious.github.io/Underpaid-No-More/Underpaid-No-More-Hub.html">← Back to Main Hub</a>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <h3>Join the Movement</h3>
+        <p>You deserve fair pay. You deserve financial security. You deserve dignity.</p>
+        <p style="margin-top: 20px;">Ready to take action?</p>
+        
+        <div class="footer-links">
+            <a href="https://darlene-conscious.github.io/Underpaid-No-More/Wealth-Theft-Calculator-Landing-Page.html">Calculate Your Wealth Theft</a> | 
+            <a href="https://darlene-conscious.github.io/Underpaid-No-More/Underpaid-No-More-Hub.html">Browse Products</a> | 
+            <a href="/cdn-cgi/l/email-protection#15607b71706765747c717b7a787a67705565677a617a7b3b7870">Contact</a>
+        </div>
+        
+        <div style="margin-top: 30px;">
+            <a href="https://www.instagram.com/underpaid.no.more?igsh=MXFqN3E5M2NkazRzag==" style="color: white; margin: 0 10px;">Instagram</a> | 
+            <a href="https://www.facebook.com/people/Underpaid-No-More/61583650460751/" style="color: white; margin: 0 10px;">Facebook</a>
+        </div>
+        
+        <p style="margin-top: 30px; font-size: 0.9em;">© 2025 Underpaid No More. All
