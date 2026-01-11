@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Are You Being Paid for What You Actually Do? | Underpaid No More</title>
+    <meta name="description" content="The 6 Questions That Reveal Whether You're Doing Management Work for Support-Level Pay">
+    <style>
+        :root {
+            --teal: #3D8B7B;
+            --burgundy: #8B3A5B;
+            --cream: #FFF8F0;
+            --text-dark: #2C2C2C;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Georgia, serif;
+            line-height: 1.8;
+            color: var(--text-dark);
+            background: var(--cream);
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 3px solid var(--burgundy);
+            margin-bottom: 40px;
+        }
+        
+        .logo {
+            width: 80px;
+            height: 80px;
+            background: var(--burgundy);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 12px;
+            text-align: center;
+            line-height: 1.2;
+            padding: 10px;
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            color: var(--burgundy);
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+        
+        .subtitle {
+            font-size: 1.3em;
+            color: var(--teal);
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+        
+        .author-info {
+            font-size: 1em;
+            color: #666;
+            font-style: italic;
+        }
+        
+        .opening-quote {
+            background: var(--cream);
+            border-left: 5px solid var(--teal);
+            padding: 30px;
+            margin: 40px 0;
+            font-size: 1.2em;
+            font-style: italic;
+            line-height: 1.6;
+        }
+        
+        h2 {
+            font-size: 2em;
+            color: var(--burgundy);
+            margin: 50px 0 20px 0;
+            line-height: 1.3;
+        }
+        
+        h3 {
+            font-size: 1.5em;
+            color: var(--teal);
+            margin: 35px 0 15px 0;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1em;
+        }
+        
+        ul {
+            margin: 20px 0 20px 40px;
+            font-size: 1.1em;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+        
+        strong {
+            color: var(--burgundy);
+            font-weight: bold;
+        }
+        
+        em {
+            color: var(--teal);
+            font-style: italic;
+        }
+        
+        .highlight-box {
+            background: var(--cream);
+            border: 2px solid var(--teal);
+            border-radius: 8px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+        
+        .comparison-box {
+            background: #f9f9f9;
+            border-left: 5px solid var(--burgundy);
+            padding: 25px;
+            margin: 30px 0;
+        }
+        
+        .question {
+            background: white;
+            border: 2px solid var(--teal);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 25px 0;
+        }
+        
+        .question h3 {
+            color: var(--burgundy);
+            margin-top: 0;
+        }
+        
+        .divider {
+            border: 0;
+            height: 2px;
+            background: var(--teal);
+            margin: 50px 0;
+            opacity: 0.3;
+        }
+        
+        .about-author {
+            background: var(--cream);
+            border-top: 3px solid var(--burgundy);
+            padding: 40px;
+            margin-top: 60px;
+        }
+        
+        .about-author h2 {
+            margin-top: 0;
+        }
+        
+        .cta-section {
+            background: var(--teal);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            margin: 50px 0;
+            border-radius: 8px;
+        }
+        
+        .cta-section h2 {
+            color: white;
+            margin-top: 0;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #666;
+            font-size: 0.9em;
+            border-top: 1px solid #ddd;
+            margin-top: 40px;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+            
+            .subtitle {
+                font-size: 1.1em;
+            }
+            
+            h2 {
+                font-size: 1.6em;
+            }
+            
+            .container {
+                padding: 20px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">UNDERPAID<br>NO MORE</div>
+            <h1>Are You Being Paid for What You Actually Do?</h1>
+            <p class="subtitle">The 6 Questions That Reveal Whether You're Doing Management Work for Support-Level Pay</p>
+            <p class="author-info">By Darlene Rutledge</p>
+        </header>
+
+        <div class="opening-quote">
+            <p>I spent 40 years being told I was "assisting with" and "providing support for" operations.</p>
+            <p>In reality, I was managing, executing, and running critical business functions.</p>
+            <p>That language difference? It cost me $12,000 per year. Over 40 years, that's $480,000—plus superannuation and interest.</p>
+            <p><strong>And I'm not alone.</strong></p>
+        </div>
+
+        <h2>The Problem Isn't Your Worth. It's Your Job Description.</h2>
+        
+        <p>If your job description uses words like:</p>
+        <ul>
+            <li>Assist</li>
+            <li>Support</li>
+            <li>Help</li>
+            <li>Coordinate</li>
+            <li>Facilitate</li>
+            <li>Aid</li>
+        </ul>
+        
+        <p>You're likely being paid with <strong>servant language</strong> for management work.</p>
+        
+        <div class="highlight-box">
+            <p>Here's an uncomfortable truth: "Service" comes from the Latin word <em>servus</em>—which literally means slave or bondsman. The word evolved through Old English as "servant" before becoming the professional-sounding "service" we use today.</p>
+            <p>When your job description says you "assist with budgets" or "support operations," it's using language descended from slavery to describe—and suppress the value of—your work.</p>
+        </div>
+
+        <hr class="divider">
+
+        <h2>Everyone Serves Someone. They Just Don't Call It That for Everyone.</h2>
+        
+        <p>Here's what helped me see it clearly:</p>
+        
+        <p><strong>Everyone in a company supports the business owner.</strong> That's what employment is.</p>
+        
+        <p>The Operations Director supports company objectives.<br>
+        The Sales Manager supports revenue goals.<br>
+        The CFO assists the CEO in financial decisions.</p>
+        
+        <p>But look at how those jobs are described:</p>
+        
+        <div class="comparison-box">
+            <p><strong>His job description:</strong> "Drives financial performance, executes operational strategy, leads cross-functional initiatives."</p>
+            <p><strong>Your job description:</strong> "Assists with budgets, supports operations, helps coordinate projects."</p>
+            <p style="margin-top: 20px;">Both of you report to a Director.<br>
+            Both of you support the company's goals.<br>
+            Both of you are employees serving the business.</p>
+            <p style="margin-top: 20px;"><strong>Only yours uses servant language.</strong><br>
+            <strong>Only yours gets servant pay.</strong></p>
+        </div>
+
+        <hr class="divider">
+
+        <h2>The Accountability Test: 6 Questions That Reveal the Truth</h2>
+        
+        <p>I created a simple test to help women see what I couldn't see for 40 years: you're already doing higher-level work than your title admits.</p>
+        
+        <p><strong>Answer these 6 yes/no questions about your role:</strong></p>
+
+        <div class="question">
+            <h3>Question 1: When someone's out sick, do you cover their work?</h3>
+            <p><strong>If YES →</strong> You're not "helping out." You're maintaining operational continuity. That's a management function.</p>
+        </div>
+
+        <div class="question">
+            <h3>Question 2: Do people come to YOU for answers?</h3>
+            <p><strong>If YES →</strong> You're not being "nice" or "helpful." You hold institutional knowledge. That's leadership.</p>
+        </div>
+
+        <div class="question">
+            <h3>Question 3: Do you make judgment calls without asking?</h3>
+            <p><strong>If YES →</strong> You're making operational decisions. You have authority—whether your title admits it or not.</p>
+        </div>
+
+        <div class="question">
+            <h3>Question 4: Do you solve problems without being told?</h3>
+            <p><strong>If YES →</strong> When the system glitches, you fix it. When schedules conflict, you resolve them. That's initiative and accountability—not support work.</p>
+        </div>
+
+        <div class="question">
+            <h3>Question 5: Are you held responsible when things go wrong?</h3>
+            <p><strong>If YES →</strong> Not formally, but actually. If you're accountable when it fails, you deserve credit (and pay) when it succeeds.</p>
+        </div>
+
+        <div class="question">
+            <h3>Question 6: Do you set priorities, or just follow them?</h3>
+            <p><strong>If YES →</strong> Even under general directives, YOU decide what gets done first. YOU allocate resources (including your time). That's operational leadership.</p>
+        </div>
+
+        <hr class="divider">
+
+        <h2>What This Means</h2>
+        
+        <div class="highlight-box">
+            <p><strong>If you answered YES to even ONE question, you have more accountability—and deserve more pay—than your servant-language job description admits.</strong></p>
+        </div>
+        
+        <p>Here's the pattern I've seen across thousands of women:</p>
+        
+        <p>Your job description says you "assist with" something.<br>
+        But if you don't do it, it doesn't get done.<br>
+        <strong>You don't assist with it. You ARE that function.</strong></p>
+        
+        <p>Your job description says you "support" a process.<br>
+        But if you're sick, that process falls apart.<br>
+        <strong>You don't support it. You MANAGE it.</strong></p>
+        
+        <p>Your job description says you "help coordinate" projects.<br>
+        But if you drop the ball, projects fail.<br>
+        <strong>You don't help. You LEAD.</strong></p>
+
+        <hr class="divider">
+
+        <h2>The Language Is the Scam</h2>
+        
+        <p>I've researched this extensively. When you compare job descriptions for roles with identical responsibilities, the pattern is clear:</p>
+        
+        <p><strong>Feminine-coded titles</strong> (Office Manager, Administrative Coordinator, Executive Assistant) use service language: assist, support, help, coordinate, facilitate.</p>
+        
+        <p><strong>Masculine-coded titles</strong> (Business Manager, Operations Manager, Chief of Staff) use leadership language: drive, execute, manage, lead, oversee.</p>
+        
+        <div class="highlight-box">
+            <p style="text-align: center; font-size: 1.3em;"><strong>Same work. Different words. $20,000-$40,000 pay gap.</strong></p>
+        </div>
+        
+        <p>The system doesn't undervalue women. It undervalues the LANGUAGE used to describe women's work.</p>
+
+        <hr class="divider">
+
+        <h2>Why This Matters</h2>
+        
+        <p>For 40 years, I minimized my own contributions because my job description told me I was "just" supporting others.</p>
+        
+        <p>I didn't see that:</p>
+        <ul>
+            <li>"Assisting with payroll" meant I WAS the payroll function</li>
+            <li>"Supporting operations" meant I MANAGED operational continuity</li>
+            <li>"Coordinating projects" meant I LED project delivery</li>
+        </ul>
+        
+        <p>The accountability was always mine.<br>
+        The management functions were always mine.<br>
+        The leadership decisions were always mine.</p>
+        
+        <p><strong>The system's language just hid that from everyone—including me.</strong></p>
+        
+        <p>And that language let them pay me as if I were support staff.</p>
+
+        <hr class="divider">
+
+        <h2>What You Can Do About It</h2>
+        
+        <p>This isn't about asking for permission or waiting for someone to notice your value.</p>
+        
+        <p>This is about <strong>seeing clearly what you're actually accountable for</strong>—and then making informed decisions about what to do next.</p>
+        
+        <p>When you can see that your "Office Manager" work is actually "Business Manager" work...</p>
+        
+        <p>When you understand that "assists with budgets" means "you ARE the budget function"...</p>
+        
+        <p>When you recognize that the LANGUAGE is suppressing your pay, not your actual contribution...</p>
+        
+        <p><strong>Then you have options:</strong></p>
+        
+        <p><strong>You can negotiate</strong> for the title and pay that match your actual responsibilities.</p>
+        
+        <p><strong>You can transition</strong> to a role where the job description accurately reflects the work (and pays accordingly).</p>
+        
+        <p><strong>You can build your own business</strong> where you set the language—and the rates—yourself.</p>
+
+        <div class="cta-section">
+            <h2>The Work You Do Isn't Support Work. It's Leadership Work.</h2>
+            <p style="font-size: 1.2em;">It's time you got paid like it.</p>
+        </div>
+
+        <p>If you answered YES to even one of those six questions, you're carrying more accountability than your job title admits.</p>
+        
+        <p>You're not imagining it.<br>
+        You're not being greedy.<br>
+        You're being systematically undervalued through language.</p>
+        
+        <p><strong>And now that you can see it, you can address it.</strong></p>
+
+        <div class="about-author">
+            <h2>About the Author</h2>
+            <p><strong>Darlene Rutledge</strong> is the founder of Underpaid No More, a platform dedicated to helping women understand and close the pay gap. After spending 40 years in undervalued administrative roles, she now helps women recognize the systematic language-based devaluation of their work—and provides strategic pathways to fair compensation.</p>
+            <p>Connect with Darlene on <a href="https://www.linkedin.com/in/darlene-rutledge/" style="color: var(--teal); text-decoration: none; font-weight: bold;">LinkedIn</a> or visit <a href="https://darlene-conscious.github.io/Underpaid-No-More/" style="color: var(--teal); text-decoration: none; font-weight: bold;">underpaidnomore.com</a> to learn more.</p>
+        </div>
+
+        <footer>
+            <p style="font-size: 0.85em; line-height: 1.6; opacity: 0.8; max-width: 800px; margin: 0 auto 20px;">
+                <strong>Disclaimer:</strong> The information provided in this article is for educational and informational purposes only. It does not constitute financial, legal, or career advice. Individual circumstances vary, and we recommend consulting with qualified professionals for personalized guidance.
+            </p>
+            <p>© 2025 Underpaid No More. All Rights Reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
